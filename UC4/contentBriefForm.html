@@ -17,4 +17,145 @@
         Συμπληρώστε το Content Brief και τις Οδηγίες της Διαφημιστικής Καμπάνιας.
     </p>
 
+    <form id="briefForm"
+          method="post"
+          enctype="multipart/form-data">
+
+        <div class="field">
+            <label for="contentBrief">
+                Content Brief *
+            </label>
+
+            <textarea id="contentBrief"
+                      name="contentBrief"
+                      required
+                      placeholder="Αναλυτική Περιγράφή Περιεχομένου..."></textarea>
+        </div>
+
+        <div class="field">
+            <label for="keywords">
+                Λέξεις-κλειδιά
+            </label>
+
+            <input type="text"
+                   id="keywords"
+                   name="keywords"
+                   placeholder="π.χ. fashion, lifestyle">
+        </div>
+
+        <div class="field">
+            <label for="instructions">
+                Οδηγίες 
+            </label> 
+
+            <textarea id="instructions"
+                      name="instructions"
+                      placeholder="Οδηγίες για τη Δημιουργία Περιεχομένου..."></textarea>
+        </div>
+
+        <div class="field">
+            <label for="restrictions">
+                Περιορισμοί
+            </label>
+
+            <textarea id="restrictions"
+                      name="restrictions"
+                      placeholder="Περιορισμοί για τη Δημιουργία Περιεχομένου..."></textarea>
+        </div>
+
+        <div class="row">
+
+            <div class="field">
+                <label for="hashtags">Hashtags</label>
+
+                <input type="text"
+                       id="hashtags"
+                       name="hashtags"
+                       placeholder="#campaign #brand">
+            </div>
+
+            <div class="field">
+                <label for="mentions">Mentions</label>
+
+                <input type="text"
+                       id="mentions"
+                       name="mentions"
+                       placeholder="@brand">
+            </div>
+
+        </div>
+
+        <div class="field">
+            <label for="videoDuration">
+                Διάρκεια βίντεο (δευτερόλεπτα)
+            </label>
+
+            <input type="number"
+                   id="videoDuration"
+                   name="videoDuration"
+                   min="1">
+        </div>
+
+        <div class="row">
+
+            <div class="field">
+                <label for="deadline">
+                    Προθεσμία υποβολής *
+                </label>
+
+                <input type="datetime-local"
+                       id="deadline"
+                       name="deadline"
+                       required>
+            </div>
+
+            <div class="field">
+                <label for="publishDate">
+                    Ημερομηνία και Ωρα Δημοσίευσης Περιεχομένου
+                </label>
+
+                <input type="datetime-local"
+                       id="publishDate"
+                       name="publishDate">
+            </div>
+
+        </div>
+
+        <div class="field">
+            <label for="attachments">
+                Συμπληρωματικό Υλικό (προαιρετικό)
+            </label>
+
+            <input type="file"
+                   id="attachments"
+                   name="attachments"
+                   accept=".pdf,.jpg,.jpeg,.png,.mp4"
+                   multiple>
+        </div>
+
+        <div class="field">
+            <label for="extraLink">
+                Επιπρόσθετο link
+            </label>
+
+            <input type="url"
+                   id="extraLink"
+                   name="extraLink"
+                   placeholder="https://example.com">
+        </div>
+
+        <div class="buttons">
+            <button type="reset" class="clear">
+                Καθαρισμός
+            </button>
+
+            <button type="submit" class="publish">
+                Δημοσίευση
+            </button>
+        </div>
+
+        <p id="message" role="status"></p>
+
+    </form>
+
 </main>
